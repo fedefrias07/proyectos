@@ -1,0 +1,73 @@
+package colectivo;
+
+public class Conductor {
+
+	
+	private int id_conductor;
+	private String nombre;
+	
+	public Conductor(int id_conductor, String nombre) {
+		super();
+		this.id_conductor = id_conductor;
+		this.nombre = nombre;
+	}
+
+	public int getId_conductor() {
+		return id_conductor;
+	}
+
+	public void setId_conductor(int id_conductor) {
+		this.id_conductor = id_conductor;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	@Override
+	public String toString() {
+		return "Conductor [id_conductor=" + id_conductor + ", nombre=" + nombre + "]";
+	}
+	
+	
+	public void eliminarPasajero() {
+		
+		
+	}
+	
+	public Pasajero cargarPartido(Pais pais1, Pais pais2) {
+
+		int goles1 = (int) (Math.random() * 10);
+		int goles2 = (int) (Math.random() * 10);
+		int tiempo = (int) (Math.random() * 10 + 92);
+
+		Partido partidonuevo = new Partido(pais1, pais2, tiempo, goles1, goles2);
+
+		if (goles1 > goles2) {
+			System.out.println(partidonuevo.getPais1().getNombre() + " vs " + partidonuevo.getPais2().getNombre()
+					+ "\nDuracion de partido: " + partidonuevo.getDuracion() + "\nResultado:\n"
+					+ partidonuevo.getPais1().getNombre() + " " + partidonuevo.getGoles1() + "\n"
+					+ partidonuevo.getPais2().getNombre() + " " + partidonuevo.getGoles2() + "\n-> GANO "
+					+ partidonuevo.getPais1().getNombre() + "\n");
+
+		} else {
+			System.out.println(partidonuevo.getPais1().getNombre() + " vs " + partidonuevo.getPais2().getNombre()
+					+ "\nDuracion de partido: " + partidonuevo.getDuracion() + "\nResultado:\n"
+					+ partidonuevo.getPais1().getNombre() + " " + partidonuevo.getGoles1() + "\n"
+					+ partidonuevo.getPais2().getNombre() + " " + partidonuevo.getGoles2() + "\n-> GANO "
+					+ partidonuevo.getPais2().getNombre() + "\n");
+
+		}
+
+		return partidonuevo;
+
+	}
+	
+	
+	
+	
+}

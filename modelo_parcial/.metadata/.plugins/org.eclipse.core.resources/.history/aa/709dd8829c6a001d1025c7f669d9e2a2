@@ -1,0 +1,19 @@
+package colectivo;
+
+public class Pasajero {
+
+	private int id_pasajero;
+	private String nombre;
+	private int edad;
+	
+	public Pasajero(int id_pasajero, String nombre, int edad) {
+		super();
+		this.id_pasajero = id_pasajero;
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+	
+	
+	
+	
+}

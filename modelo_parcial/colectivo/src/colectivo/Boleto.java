@@ -1,0 +1,34 @@
+package colectivo;
+
+public class Boleto {
+	private int id_boleto;
+	private double precio;
+
+	public Boleto(int id_boleto, double precio) {
+		super();
+		this.id_boleto = id_boleto;
+		this.precio = precio;
+	}
+
+	public int getId_boleto() {
+		return id_boleto;
+	}
+
+	public void setId_boleto(int id_boleto) {
+		this.id_boleto = id_boleto;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	@Override
+	public String toString() {
+		return "Boleto [id_boleto=" + id_boleto + ", precio=" + precio + "]";
+	}
+
+}
