@@ -1,0 +1,75 @@
+package colectivo;
+
+import javax.swing.JOptionPane;
+
+public class Conductor {
+
+	private int id_conductor;
+	private String nombre;
+
+	public Conductor(int id_conductor, String nombre) {
+		super();
+		this.id_conductor = id_conductor;
+		this.nombre = nombre;
+	}
+
+	public int getId_conductor() {
+		return id_conductor;
+	}
+
+	public void setId_conductor(int id_conductor) {
+		this.id_conductor = id_conductor;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	@Override
+	public String toString() {
+		return "Conductor [id_conductor=" + id_conductor + ", nombre=" + nombre + "]";
+	}
+
+	public void encenderColectivo(Colectivo colectivo) {
+
+		if (colectivo.isMortor() == true) {
+			System.out.println(this.getNombre() + " el motor ya esta encendido");
+		} else {
+			colectivo.setMortor(true);
+			System.out.println(this.getNombre() + " acaba de encender el motor");
+		}
+
+	}
+
+	public void subirPasajeros(Colectivo colectivo, Pasajero pasajero) {
+
+		do {
+			int nueva_cantidad;
+			
+			nueva_cantidad= Integer.parseInt(JOptionPane.showInputDialog("Ingrese cantidad de pasajeros"));
+			colectivo.setCantidad(nueva_cantidad);
+			
+			System.out.println();
+			
+			pasajero.getNombre();
+			
+			
+			
+			
+
+		} while (colectivo.getCantidad() != 50);
+		System.out.println("Puede seguir subiendo pasajeros");
+	}
+
+	
+	
+	
+	
+	
+	
+	
+}

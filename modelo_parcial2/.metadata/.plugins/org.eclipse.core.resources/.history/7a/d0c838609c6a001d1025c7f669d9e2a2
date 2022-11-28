@@ -1,0 +1,9 @@
+package colectivo;
+
+public class Colectivo {
+	
+	private int id_colectivo;
+	private int cantidad;
+	
+}
+

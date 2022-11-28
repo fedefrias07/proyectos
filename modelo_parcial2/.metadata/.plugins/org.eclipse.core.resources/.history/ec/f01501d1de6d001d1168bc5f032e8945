@@ -1,0 +1,38 @@
+package colectivo;
+
+public class sube {
+	private int id_boleto;
+	private double saldo;
+
+	
+
+	public int getId_boleto() {
+		return id_boleto;
+	}
+
+	public void setId_boleto(int id_boleto) {
+		this.id_boleto = id_boleto;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	@Override
+	public String toString() {
+		return "Boleto [id_boleto=" + id_boleto + ", precio=" + precio + "]";
+	}
+
+	
+	
+	public void boletoRandom() {
+		
+		
+		
+		
+	}
+}

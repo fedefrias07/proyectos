@@ -1,0 +1,19 @@
+package colectivo;
+
+public class sube {
+	private int id_sube;
+	private double saldo;
+
+	
+
+
+
+	
+	
+	public void boletoRandom() {
+		
+		
+		
+		
+	}
+}

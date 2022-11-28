@@ -1,0 +1,38 @@
+package colectivo;
+
+public class sube {
+	private int id_sube;
+	private double saldo;
+
+	public sube(int id_sube, double saldo) {
+		super();
+		this.id_sube = id_sube;
+		this.saldo = saldo;
+	}
+
+	public int getId_sube() {
+		return id_sube;
+	}
+
+	public void setId_sube(int id_sube) {
+		this.id_sube = id_sube;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public void boletoRandom() {
+		
+		this.setSaldo(Math.random()*20);
+		
+		
+	}
+	
+	
+	
+}

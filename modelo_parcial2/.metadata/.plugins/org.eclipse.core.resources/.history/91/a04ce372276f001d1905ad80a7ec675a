@@ -1,0 +1,124 @@
+package colectivo;
+
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Colectivo colectivo = new Colectivo(1, 0, false);
+		
+		Conductor pepe  = new Conductor(001,"Pepe");
+		
+		
+		//Lista pasajeros
+		
+		ArrayList<Pasajero> listaPasajeros = new ArrayList<Pasajero>();
+
+		listaPasajeros.add(new Pasajero(1, "Juan", 15));
+		listaPasajeros.add(new Pasajero(2, "Pablo", 15));
+		listaPasajeros.add(new Pasajero(3, "Matias", 15));
+		listaPasajeros.add(new Pasajero(4, "Franco", 15));
+		listaPasajeros.add(new Pasajero(5, "Raul", 15));
+
+		
+		
+		ArrayList<Pais> octavos = new ArrayList<Pais>();
+
+		System.out.println("LOS QUE PASAN A OCTAVOS SON:\n");
+
+		for (Pais pasaOctavos : equipos) {
+			if (pasaOctavos.isEstado() == true) {
+				octavos.add(pasaOctavos);
+			}
+
+		}
+
+		for (int i = 0; i < octavos.size(); i++) {
+			System.out.println(octavos.get(i).getNombre());
+		}
+
+
+	
+		
+		//MENU
+		
+		Scanner entrada = new Scanner(System.in);
+
+		boolean salir = false;
+		int opcion;
+
+		System.out.println("Colectivo\n");
+
+		while (!salir) {
+
+			System.out.println("\n1. Encender colectivo.\n");
+			System.out.println("2. Subir pasajeros.\n");
+			System.out.println("3. Ver pasajeros.\n");
+			System.out.println("4. Eliminar pasajeros.\n");
+			System.out.println("5. Salir.\n");
+
+			try {
+
+				System.out.println("--> Elija una opcion (1 - 5)");
+				opcion = entrada.nextInt();
+
+				switch (opcion) {
+				case 1:
+					
+					pepe.encenderColectivo(colectivo);
+
+					break;
+				case 2:
+					
+					System.out.println("El colectivo lleva " + colectivo.getCantidad() + " pasajeros"); 
+					
+					pepe.subirPasajeros(colectivo);
+
+					break;
+				case 3:
+					
+					for (int i = 0; i < listaPasajeros.size(); i++) {
+
+						System.out.println(listaPasajeros.get(i).getNombre());
+					}
+
+					break;
+
+				case 4:
+					System.out.println("chau");
+					break;
+					
+				case 5:
+					salir = true;
+					break;
+				default:
+					System.err.println("Porfavor, ingrese una opcion entre 1 y 4.");
+					break;
+				}
+
+			} catch (InputMismatchException e) {
+				System.err.println("No ingrese letras, debe que ser un numero entre 1 y 4.");
+				entrada.nextInt();
+				
+			}
+			
+		}
+		System.err.println("Termino su recorrido.");
+		
+
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
+// Colectivo {parada1, parada2}
+
+// ValorBoleto{10, 14}
